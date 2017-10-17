@@ -1,4 +1,4 @@
-var db = require('../models')
+var db = require('../models');
 
 exports.getTodos = function(req, res, next) {
     db.Todo.find()
@@ -18,6 +18,6 @@ exports.createTodos = function (req, res, next) {
         .catch(function (err){
             res.send(err);
         })
-}
+};
 
 module.exports = exports;

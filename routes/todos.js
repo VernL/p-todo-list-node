@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var db = require("../models");
-var helpers = require("../helpers/todos")
+var helpers = require("../helpers/todos");
 
 /* GET home page. */
 router.route('/')
     .get(helpers.getTodos)
-    .post(helpers.createTodos)
+    .post(helpers.createTodos);
 
 router.get('/:todoId', function(req,res){
     db.Todo.findById(req.params.todoId)

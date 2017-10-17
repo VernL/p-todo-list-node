@@ -1,10 +1,11 @@
 var mongoose = require('mongoose');
 mongoose.set('debug',true);
 
-// mongoose.connect('mongodb://localhost/todo-api', {useMongoClient: true}); //create database if does nto exit or connect
+if(!process.env.DATABASEURL){
+    process.env.DATABASEURL = 'mongodb://localhost/todo-api';
+}
 
-mongoose.connect('mongodb://vernon:cows56m5@ds121945.mlab.com:21945/todos-api', {useMongoClient: true});
-
+mongoose.connect(process.env.DATABASEURL, {useMongoClient: true});
 
 mongoose.Promise = Promise; //allow us to use the promise syntax
 
