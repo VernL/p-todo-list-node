@@ -1,2 +1,7 @@
-# todos-api
-Exercise on APIs from The Web Advanced Developer Bootcamp. Hosted on Heroku with a mLab database. 
+# p-todo-list-node
+
+> A simple todo list API made with node
+
+## Live site 
+
+Hosted on Heroku with a mLab database. 
